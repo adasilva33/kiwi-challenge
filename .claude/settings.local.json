@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"\nimport pdfplumber\nwith pdfplumber.open\\('/Users/dasilvaa/Documents/coding/kiwi-challenge/problem_description.pdf'\\) as pdf:\n    for page in pdf.pages[:5]:\n        print\\(page.extract_text\\(\\)\\)\n        print\\('---PAGE---'\\)\n\" 2>/dev/null || python3 -m pip install pdfplumber -q && python3 -c \"\nimport pdfplumber\nwith pdfplumber.open\\('/Users/dasilvaa/Documents/coding/kiwi-challenge/problem_description.pdf'\\) as pdf:\n    for page in pdf.pages[:5]:\n        print\\(page.extract_text\\(\\)\\)\n        print\\('---PAGE---'\\)\n\")",
+      "Bash(wc -l /Users/dasilvaa/Documents/coding/kiwi-challenge/instances/*.in && head -3 /Users/dasilvaa/Documents/coding/kiwi-challenge/instances/6.in)",
+      "Bash(python3 solver.py instances/1.in 2>&1)",
+      "Bash(for i:*)",
+      "Bash(jupyter nbconvert:*)",
+      "Bash(python3 -m venv /Users/dasilvaa/Documents/coding/kiwi-challenge/.venv)",
+      "Bash(/Users/dasilvaa/Documents/coding/kiwi-challenge/.venv/bin/pip install:*)",
+      "Bash(/Users/dasilvaa/Documents/coding/kiwi-challenge/.venv/bin/python -m ipykernel install --user --name kiwi-challenge --display-name \"Python \\(kiwi-challenge\\)\" 2>&1)",
+      "Bash(/Users/dasilvaa/Documents/coding/kiwi-challenge/.venv/bin/python --version && /Users/dasilvaa/Documents/coding/kiwi-challenge/.venv/bin/pip list 2>/dev/null | grep -E \"ipykernel|jupyter|pandas\")",
+      "Bash(.venv/bin/python -c \"\nfrom validate import validate\nvalidate\\('instances/1.in', 'AB0 AB7 AB4 AB9 AB1 AB6 AB2 AB8 AB3 AB5 AB0'\\)\nprint\\('---'\\)\nvalidate\\('instances/1.in', 'AB0 AB7 AB4 AB9 AB1 AB6 AB2 AB8 AB3 AB5 AB1'\\)\n\")"
+    ]
+  }
+}
