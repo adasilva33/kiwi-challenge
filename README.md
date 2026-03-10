@@ -1,4 +1,26 @@
-# Solution Comparison
+# Kiwi.com Flight Route Challenge — LLM vs Literature
+
+## Context
+
+This repository explores the [Kiwi.com flight route optimisation challenge](https://www.kiwi.com/), a combinatorial problem best described as a **time-dependent asymmetric Travelling Salesman Problem (TSP)**. The goal is to visit a set of geographic areas exactly once via connecting flights, at minimum total cost, where prices vary by day and direction.
+
+The challenge has been studied in academic literature. This project asks a simple question: **how far can you get in ~30 minutes by prompting Claude to design and implement a Monte Carlo Tree Search (MCTS) solver from scratch?**
+
+The solver uses:
+- MCTS with UCT selection
+- Automated parameter tuning (greedy vs. nearest-neighbour rollouts, UCT constant `c`)
+- Dead-end airport filtering to handle sparse flight graphs
+- A 15-second time budget per instance
+
+Results are then compared against two published methods:
+- **Arnaud et al.** — MCTS-based solver (no time limit)
+- **Yaro et al.** — Reinforcement Learning with Optimisation Improvement (no time limit)
+
+On 4 out of 14 instances, the Claude-built solver **outperforms the best-known results** cited in both papers, despite running under a strict time limit.
+
+---
+
+## Solution Comparison
 
 ## Methods
 
